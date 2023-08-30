@@ -1,11 +1,8 @@
-import java.util.Optional;
-
 class Solution {
     public String intToRoman(int num) 
     {
         Map<Integer, String> map = new HashMap<>();
 
-        //initialization of roman vals
         map.put(1, "I");
         map.put(4, "IV");
         map.put(5, "V");
