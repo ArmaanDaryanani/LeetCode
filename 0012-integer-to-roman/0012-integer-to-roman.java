@@ -2,7 +2,6 @@ class Solution {
     public String intToRoman(int num) 
     {
         Map<Integer, String> map = new HashMap<>();
-
         map.put(1, "I");
         map.put(4, "IV");
         map.put(5, "V");
@@ -16,7 +15,6 @@ class Solution {
         map.put(500, "D");
         map.put(900, "CM");
         map.put(1000, "M");
-
         int numMut =  num;
         int total = 0;
         String romanStr = "";
@@ -40,11 +38,6 @@ class Solution {
             }
             break;
         }
-        System.out.println(total);
         return romanStr;
-
-        
-
-        
     }
 }
