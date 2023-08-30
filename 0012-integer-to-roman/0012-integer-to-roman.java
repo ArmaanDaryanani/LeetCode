@@ -18,19 +18,15 @@ class Solution {
         int numMut =  num;
         int total = 0;
         String romanStr = "";
-        while (total != num) 
-        {
+        while (total != num) {
             int maxKey = 0;
-            for (Integer key : map.keySet()) 
-            {
-                if (key <= numMut && key > maxKey) 
-                {
+            for (Integer key : map.keySet()) {
+                if (key <= numMut && key > maxKey) {
                     maxKey = key;
                 }
             }
 
-            if (maxKey > 0) 
-            {
+            if (maxKey > 0) {
                 romanStr += map.get(maxKey);
                 total += maxKey;
                 numMut -= maxKey;
