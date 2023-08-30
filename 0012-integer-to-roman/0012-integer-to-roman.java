@@ -20,7 +20,6 @@ class Solution {
         map.put(900, "CM");
         map.put(1000, "M");
 
-        ArrayList<Integer> arr = new ArrayList<>();
         int numMut =  num;
         int total = 0;
         String romanStr = "";
