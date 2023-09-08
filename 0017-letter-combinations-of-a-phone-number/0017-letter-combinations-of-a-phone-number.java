@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
     ArrayList<String> output = new ArrayList<>();
     HashMap<Character, String> map = new HashMap<>();
     public List<String> letterCombinations(String digits) 
