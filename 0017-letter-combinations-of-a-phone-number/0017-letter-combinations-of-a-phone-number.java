@@ -21,22 +21,29 @@ class Solution
             return List.of();
         }
         
-        combos("", digits);
+        combos(new StringBuilder(), digits, 0);
         return output;
     }
-    public void combos(String combo, String nextDigits)
+    public void combos(StringBuilder combo, String digits, int index)
     {
-        if(nextDigits.isEmpty())
+        if (index == digits.length())
         {
-            output.add(combo);
+            output.add(combo.toString());
+            return;
         }
-        else
+        String str = map.get(digits.charAt(index));
+        for (char ch : str.toCharArray())
         {
-            String str = map.get(nextDigits.charAt(0));
-            for(char ch : str.toCharArray())
-            {
-                combos(combo + ch, nextDigits.substring(1));
-            }
+            combo.append(ch);  
+            combos(combo, digits, index + 1);
+            combo.deleteCharAt(combo.length() - 1);  
         }
     }
+
+
+
+
+
+
+
 }
